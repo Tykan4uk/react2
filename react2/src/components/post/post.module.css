@@ -1,0 +1,26 @@
+.post {
+  width: 1000px;
+  border: 2px solid cornsilk;
+  border-radius: 5px;
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postTags {
+  display: flex;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

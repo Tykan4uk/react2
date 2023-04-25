@@ -4,6 +4,7 @@ import { PostModel } from "../../models/postModel";
 import { PostService } from "../../services/postService";
 import { Post } from "../post/post";
 import { PaginationArrows } from "../paginationArrows/paginationArrows";
+import styles from "./postList.module.css";
 
 export const PostList = () => {
   const [posts, setPosts] = useState<PostModel[]>();
@@ -27,14 +28,15 @@ export const PostList = () => {
   const nextPage = () => { setPage(page + 1); }
 
   return (
-    <div>
+    <div className={styles["postList"]}>
       {
         posts?.map(post => (<Post
           title={post.title}
           body={post.body}
           userId={post.userId}
           tags={post.tags}
-          reactions={post.reactions} />))
+          reactions={post.reactions}
+          key={post.id} />))
       }
       <PaginationArrows currentPage={page} pageCount={pageCount!} prevPageEvent={prevPage} nextPageEvent={nextPage} />
     </div>

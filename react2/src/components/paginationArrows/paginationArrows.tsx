@@ -1,24 +1,27 @@
 import { FC } from "react";
 import { PaginationArrowsProps } from "./paginationArrowsProps";
+import styles from "./paginationArrows.module.css";
 
 export const PaginationArrows: FC<PaginationArrowsProps> = ({ currentPage, pageCount, prevPageEvent, nextPageEvent }) => {
   return (
-    <div>
+    <div className={styles["pagination"]}>
       {
-        currentPage !== 0 ?
-          (
-            <div>
-              <span onClick={prevPageEvent}>&#60;</span>
-            </div>
-          ) : (<></>)
+        (
+          <div
+            className={currentPage !== 0 ? styles["activeArrow"] : styles["inactiveArrow"]}
+            onClick={prevPageEvent}>
+            <span>&#60;</span>
+          </div>
+        )
       }
       {
-        currentPage !== pageCount ?
-          (
-            <div>
-              <span onClick={nextPageEvent}>&#62;</span>
-            </div>
-          ) : (<></>)
+        (
+          <div
+            className={currentPage !== pageCount ? styles["activeArrow"] : styles["inactiveArrow"]}
+            onClick={nextPageEvent}>
+            <span>&#62;</span>
+          </div>
+        )
       }
     </div>
   )
