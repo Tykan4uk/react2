@@ -1,0 +1,14 @@
+.counter {
+  width: 35px;
+  height: 35px;
+  background-color: lightblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.image {
+  width: 20px;
+}

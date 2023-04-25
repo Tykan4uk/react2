@@ -1,0 +1,8 @@
+.tag {
+  width: fit-content;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: lightgray;
+  padding: 5px;
+  margin-right: 5px;
+}

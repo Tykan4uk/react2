@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+}
+
+.activeArrow,
+.inactiveArrow {
+  width: 75px;
+  height: 30px;
+  border: 1px solid lightyellow;
+  background-color: lightyellow;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.inactiveArrow {
+  border: 1px solid lightgrey;
+  background-color: lightgrey;
+  cursor: default;
+  pointer-events: none;
+}
